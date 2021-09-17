@@ -17,7 +17,7 @@ struct quad {
 int main() {
 	// Create cube
 	struct quad cube_object[6];
-	
+	// 1, 1	
 	cube_object[0].x[0] = 1;
 	cube_object[0].x[1] = -1;
 	cube_object[0].x[2] = -1;

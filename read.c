@@ -33,4 +33,6 @@ int main() {
 
 	// Object is now loaded into memory.	
 	printf("First vertex: (%d, %d, %d)", object[0].x[0], object[0].y[0], object[0].z[0]);
+	
+
 }

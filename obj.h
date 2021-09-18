@@ -7,6 +7,7 @@ enum type;
 
 struct quad; 
 struct vertice;
+typedef unsigned int face[4];
 
 int next_char_pointer(char *content, int current_offset, int lim, char delim);
 

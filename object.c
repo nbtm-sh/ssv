@@ -5,10 +5,10 @@ OBJECT *object_allocate(int p_count) {
 	p_count *= sizeof(POLYGON_T);
 	
 	// Allocate base object
-	OBJECT *alloc = (OBJECT *) malloc(sizeof(OBJECT));
+	OBJECT *alloc = (OBJECT *) ss_malloc(sizeof(OBJECT));
 	
 	// Allocate polygon array
-	alloc->polygons = malloc(p_count);
+	alloc->polygons = ss_malloc(p_count);
 
 	return alloc;
 }

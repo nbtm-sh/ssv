@@ -1,5 +1,6 @@
 BUILD_CMD = gcc
 MKDIR_CMD = mkdir
+RM_CMD = rm -rf 
 AR_CMD = ar
 TMP_DIR = tmp/
 BIN_OUTPUT = bin/
@@ -26,5 +27,11 @@ test_object_allocate: object
 	$(MKDIR_CMD) -p $(BIN_OUTPUT)
 	$(MKDIR_CMD) -p $(TEST_BIN_OUTPUT)
 	$(BUILD_CMD) -I$(H_HOME) -o $(TEST_BIN_OUTPUT)test_object_allocate $(TEST_OBJECT_ALLOCATE_TARGETS) -L$(LIB_OUTPUT) $(BUILD_LIBRARIES) 
+
+cleanup:
+	$(RM_CMD) tmp/
+
+clean: cleanup
+	$(RM_DIR) bin/
 
 all_tests: test_object_allocate
